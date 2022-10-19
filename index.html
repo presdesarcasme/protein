@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protein Shakes</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #876445;
+        }
+
+        h2 {
+            text-align: center;
+            border: 1px solid #CA965C;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 30px;
+            background-color: #EEC373;
+            font-style: italic;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 20px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 16px;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        .learn-more {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+            color: #876445;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            color: white;
+            background-color: #876445;
+            font-size: 14;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgb(0, 0, 0.2);
+            font-weight: bold;
+            transition: all 200ms ease-out;
+
+
+        }
+
+        button:hover {
+            background-color: #CA965C;
+            cursor: pointer;
+
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 10px;
+            background-image: linear-gradient(109.5deg, rgb(229, 233, 177) 11.2%, rgb(223, 205, 187) 100.2%);
+            border-radius: 10px;
+
+        }
+
+        span.ingredient {
+            color: darkgoldenrod;
+        }
+
+        .hr-washed {
+            margin: 20px 0;
+            padding: 0;
+            height: 0;
+            border: none;
+            box-shadow: 0 0 10px 1px darkgoldenrod;
+        }
+
+        strong {
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Protein Shakes
+        </h1>
+        <h2>
+            Protein shakes are made from protein powder.
+            This protein usually comes from
+            <span class="ingredient">
+                eggs </span>
+            or
+            <span class="ingredient"> milk </span>
+            , but it can come from
+            <span class="ingredient"> plants </span>
+            such as soybeans or rice.
+
+        </h2>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/045/440/original/изображение_2022-09-04_170429803.png?1662300272"
+            alt="Protein Shake" />
+        <p>
+            Protein shakes promote muscle gain and improve performance and recovery.
+            They also prevent muscle loss and may even help increase muscle mass during weight loss.
+            Ideally, you should consume a protein shake within 30 minutes of completing your workout.
+            This ensures that your muscles are getting the nutrients they need to recover and grow.
+            <hr class="hr-washed">
+            <br>
+            <em>
+                <strong>Getting enough protein may support healthy metabolism and reduce your
+                    appetite. </strong> </em> </br>
+
+            <a href="https://milesfit.com/en/blog/31-protein-shake-recipes" target="_blank" class="learn-more">
+                Learn more: 31 Protein Shake Recipes
+            </a>
+            <button class="buy-button">
+                👉 Buy Protein Powder to make shakes
+            </button>
+        <p class="footer">
+            This page was built by Anastasiia Lykhohrai 👩‍💻
+            </a>
+        </p>
+    </div>
+    <script>
+        function buyPowder() {
+            let name = prompt("What is your name?");
+            let contactInfo = prompt("What is your email?");
+            let age = prompt("How old are you?");
+            if (age > 16) {
+                alert("Hi, " + name + "! We will contact you to provide more info about our protein flavours soon!");
+            } else {
+                alert("Hi, " + name + "! Unfortunately, you can not buy protein powder, if you are under 16. Please, ask your parents to make an order!")
+            }
+        }
+        let buyButton = document.querySelector(".buy-button")
+        buyButton.addEventListener("click", buyPowder);
+    </script>
+</body>
+
+</html>
